@@ -1,5 +1,6 @@
 package com.example.trestapi2firebase;
 
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,10 +13,11 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.trestapi2firebase.model.Event;
 import com.firebase.ui.firestore.FirestoreRecyclerAdapter;
 import com.firebase.ui.firestore.FirestoreRecyclerOptions;
+import com.google.firebase.firestore.DocumentSnapshot;
 import com.squareup.picasso.Picasso;
 
 public class EventAdapter extends FirestoreRecyclerAdapter<Event, EventAdapter.EventHolder> {
-
+    private OnItemClickListener listener;
     /**
      * Create a new RecyclerView adapter that listens to a Firestore Query.  See {@link
      * FirestoreRecyclerOptions} for configuration options.
@@ -39,7 +41,25 @@ public class EventAdapter extends FirestoreRecyclerAdapter<Event, EventAdapter.E
             textViewdate = v.findViewById(R.id.event_txt_date);
             textViewtitle = v.findViewById(R.id.event_txt_title);
             textViewaddress = v.findViewById(R.id.event_txt_address);
+
+            v.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    int position = getAdapterPosition();
+                    if (position != RecyclerView.NO_POSITION && listener != null) {
+                        listener.onItemClick(getSnapshots().getSnapshot(position), position);
+                    }
+                }
+            });
         }
+    }
+
+    public interface OnItemClickListener {
+        void onItemClick(DocumentSnapshot documentSnapshot, int position);
+    }
+
+    public void setOnClickListener(OnItemClickListener listener) {
+        this.listener = listener;
     }
 
     @Override

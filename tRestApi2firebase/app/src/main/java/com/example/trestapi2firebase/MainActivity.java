@@ -5,9 +5,12 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.TextView;
+import android.widget.Toast;
+import android.widget.Toolbar;
 
 import com.example.trestapi2firebase.model.Event;
 import com.example.trestapi2firebase.model.PaginatedEvents;
@@ -18,6 +21,7 @@ import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.Query;
 
@@ -70,7 +74,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void setUpRecyclerView() {
-        Query query = eventRef.orderBy("id", Query.Direction.DESCENDING);
+        Query query = eventRef.orderBy("changed", Query.Direction.DESCENDING);
 
         FirestoreRecyclerOptions<Event> options = new FirestoreRecyclerOptions.Builder<Event>()
                 .setQuery(query, Event.class)
@@ -82,6 +86,28 @@ public class MainActivity extends AppCompatActivity {
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setAdapter(eventAdapter);
+
+        eventAdapter.setOnClickListener(new EventAdapter.OnItemClickListener() {
+            @Override
+            public void onItemClick(DocumentSnapshot documentSnapshot, int position) {
+                Event event = documentSnapshot.toObject(Event.class);
+                Intent eventIntent = new Intent(MainActivity.this, EventActivity.class);
+
+                if (event.getLogo() != null) {
+                    eventIntent.putExtra("image_url",event.getLogo().getOriginal().getUrl());
+                } else {
+                    eventIntent.putExtra("image_url","https://github.com/Fitness-Event-APP/Fitness/blob/master/HatchfulExport-All/instagram_profile_image.png");
+                }
+
+                eventIntent.putExtra("title",event.getName().getText());
+                eventIntent.putExtra("description",event.getDescription().getText());
+                eventIntent.putExtra("startTime",event.getStart().getLocal());
+                eventIntent.putExtra("endTime",event.getEnd().getLocal());
+                eventIntent.putExtra("address", event.getId());
+                startActivity(eventIntent);
+
+            }
+        });
     }
 
     @Override
@@ -95,6 +121,8 @@ public class MainActivity extends AppCompatActivity {
         super.onStop();
         eventAdapter.stopListening();
     }
+
+
 
     private void getEvents() {
         Call<PaginatedEvents> call = eventbriteApi.getPaginatedEvents(108, "IRN4X6MKLUWHLIFGBEDY");
@@ -155,9 +183,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
-
-
-
 
 
 }
