@@ -177,6 +177,18 @@ public class Event {
     @Expose
     private Logo logo;
 
+    @SerializedName("venue")
+    @Expose
+    private Venue venue;
+
+    public void setVenue(Venue venue) {
+        this.venue = venue;
+    }
+
+    public Venue getVenue() {
+        return venue;
+    }
+
     public Text getName() {
         return name;
     }

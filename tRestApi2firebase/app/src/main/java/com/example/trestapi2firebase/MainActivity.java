@@ -131,7 +131,7 @@ public class MainActivity extends AppCompatActivity {
             pages[i] = i+1;
         }
 
-        Call<PaginatedEvents> call = eventbriteApi.getPaginatedEvents(108, pages,"IRN4X6MKLUWHLIFGBEDY");
+        Call<PaginatedEvents> call = eventbriteApi.getPaginatedEvents(108, pages,"venue","IRN4X6MKLUWHLIFGBEDY");
 
         call.enqueue(new Callback<PaginatedEvents>() {
             @Override
