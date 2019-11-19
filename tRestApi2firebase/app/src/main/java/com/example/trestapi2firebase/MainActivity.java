@@ -125,7 +125,13 @@ public class MainActivity extends AppCompatActivity {
 
 
     private void getEvents() {
-        Call<PaginatedEvents> call = eventbriteApi.getPaginatedEvents(108, "IRN4X6MKLUWHLIFGBEDY");
+
+        Integer[] pages = new Integer[200];
+        for (int i = 0; i < pages.length; i++) {
+            pages[i] = i+1;
+        }
+
+        Call<PaginatedEvents> call = eventbriteApi.getPaginatedEvents(108, pages,"IRN4X6MKLUWHLIFGBEDY");
 
         call.enqueue(new Callback<PaginatedEvents>() {
             @Override
@@ -140,7 +146,7 @@ public class MainActivity extends AppCompatActivity {
 
 
                 Pagination pagination = paginatedEvents.getPagination();
-                db.collection("Pagination").document("test2").
+                db.collection("Pagination").document("test4").
                         set(pagination).
                         addOnSuccessListener(new OnSuccessListener<Void>() {
                             @Override
@@ -162,7 +168,7 @@ public class MainActivity extends AppCompatActivity {
                             .addOnSuccessListener(new OnSuccessListener<Void>() {
                                 @Override
                                 public void onSuccess(Void aVoid) {
-                                    Log.d(TAG, "DocumentSnapshot added with name ");
+                                    Log.d(TAG, "DocumentSnapshot added with events ");
                                 }
                             })
                             .addOnFailureListener(new OnFailureListener() {

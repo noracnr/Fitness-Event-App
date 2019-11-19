@@ -9,6 +9,6 @@ import retrofit2.http.Query;
 public interface EventbriteApi {
 
     @GET("/v3/events/search/")
-    Call<PaginatedEvents> getPaginatedEvents(@Query("categories") int categories, @Query("token") String token);
+    Call<PaginatedEvents> getPaginatedEvents(@Query("categories") int categories,@Query("page") Integer[] page,@Query("token") String token);
 
 }
