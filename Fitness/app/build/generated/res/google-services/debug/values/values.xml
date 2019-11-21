@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="default_web_client_id" translatable="false">512588597557-9aqc5e9a0l1q7pkchjrbj1jrfb623mnd.apps.googleusercontent.com</string>
+    <string name="firebase_database_url" translatable="false">https://fitnesseventapp.firebaseio.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">512588597557</string>
+    <string name="google_api_key" translatable="false">AIzaSyCtDFAtNs0RV-iilzC62Q1t9pfCYljmWlg</string>
+    <string name="google_app_id" translatable="false">1:512588597557:android:50d5d724f8401a05cba47c</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyCtDFAtNs0RV-iilzC62Q1t9pfCYljmWlg</string>
+    <string name="google_storage_bucket" translatable="false">fitnesseventapp.appspot.com</string>
+    <string name="project_id" translatable="false">fitnesseventapp</string>
+</resources>

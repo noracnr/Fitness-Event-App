@@ -1,0 +1,56 @@
+{
+  "project_info": {
+    "project_number": "512588597557",
+    "firebase_url": "https://fitnesseventapp.firebaseio.com",
+    "project_id": "fitnesseventapp",
+    "storage_bucket": "fitnesseventapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:512588597557:android:50d5d724f8401a05cba47c",
+        "android_client_info": {
+          "package_name": "com.example.fitnessevent"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "512588597557-o3a33ktm0kvlhvgl5mls35brq0075ao5.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.fitnessevent",
+            "certificate_hash": "5fded12a416f1f5da6b777f8cf923b43fdb32606"
+          }
+        },
+        {
+          "client_id": "512588597557-vrmcmrhdtl7ojv2venpvofn6h5eldpol.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.fitnessevent",
+            "certificate_hash": "a19680859501c17fc992298839188de73a531f7b"
+          }
+        },
+        {
+          "client_id": "512588597557-9aqc5e9a0l1q7pkchjrbj1jrfb623mnd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCtDFAtNs0RV-iilzC62Q1t9pfCYljmWlg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "512588597557-9aqc5e9a0l1q7pkchjrbj1jrfb623mnd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
