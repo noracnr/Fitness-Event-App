@@ -39,4 +39,13 @@ public class CropMask {
     public void setHeight(Integer height) {
         this.height = height;
     }
+
+    public CropMask() {
+    }
+
+    public CropMask(TopLeft topLeft, Integer width, Integer height) {
+        this.topLeft = topLeft;
+        this.width = width;
+        this.height = height;
+    }
 }

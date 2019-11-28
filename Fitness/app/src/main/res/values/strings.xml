@@ -3,7 +3,7 @@
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">notifications</string>
-    <string name="title_create">create</string>
+    <string name="title_search">search</string>
     <string name="title">Fitness Event in Boston</string>
     <string name="title1">Boston Jogger Tour Celebration Run</string>
     <string name="description">description</string>
@@ -124,4 +124,48 @@
     <string name="myLikesTitle">My Likes</string>
     <string name="mylikes_text">Uh-oh, maybe you should mark your likes first!</string>
 
+    <string name="basic_info">Create Fitness Event</string>
+    <string name="event_title">Event Title</string>
+    <string name="fitness">Fitness</string>
+    <string name="Location">Location</string>
+    <string name="time">Time</string>
+    <string name="start_date">Start Date:</string>
+    <string name="start_time">Start Time:</string>
+    <string name="end_date">End Date:</string>
+    <string name="end_time">End Time:</string>
+    <string name="quantity">Quantity</string>
+    <string name="price">Price</string>
+    <string name="ticket">Ticket</string>
+    <string name="Description">Description</string>
+    <!-- for filter activity-->
+    <string-array name="catelogy_array">
+        <item>Baseball</item>
+        <item>Basketball</item>
+        <item>Camps</item>
+        <item>Cheer</item>
+        <item>Cycling</item>
+        <item>Exercise</item>
+        <item>Fighting &amp; Martial Arts</item>
+        <item>Football</item>
+        <item>Golf</item>
+        <item>Hockey</item>
+        <item>Lacrosse</item>
+        <item>Motorsports</item>
+        <item>Mountain Biking</item>
+        <item>Obstacles</item>
+        <item>Rugby</item>
+        <item>Running</item>
+        <item>Snow Sports</item>
+        <item>Soccer</item>
+        <item>Softball</item>
+        <item>Swimming &amp; Water Sports</item>
+        <item>Tennis</item>
+        <item>Track &amp; Field</item>
+        <item>Volleyball</item>
+        <item>Walking</item>
+        <item>Weightlifting</item>
+        <item>Wrestling</item>
+        <item>Yoga</item>
+        <item>Other</item>
+    </string-array>
 </resources>

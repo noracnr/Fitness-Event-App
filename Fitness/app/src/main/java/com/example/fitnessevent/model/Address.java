@@ -137,4 +137,21 @@ public class Address {
     public void setLocalizedMultiLineAddressDisplay(List<String> localizedMultiLineAddressDisplay) {
         this.localizedMultiLineAddressDisplay = localizedMultiLineAddressDisplay;
     }
+
+    public Address() {
+    }
+
+    public Address(String address1, String address2, String city, String region, String postalCode, String country, String latitude, String longitude, String localizedAddressDisplay, String localizedAreaDisplay, List<String> localizedMultiLineAddressDisplay) {
+        this.address1 = address1;
+        this.address2 = address2;
+        this.city = city;
+        this.region = region;
+        this.postalCode = postalCode;
+        this.country = country;
+        this.latitude = latitude;
+        this.longitude = longitude;
+        this.localizedAddressDisplay = localizedAddressDisplay;
+        this.localizedAreaDisplay = localizedAreaDisplay;
+        this.localizedMultiLineAddressDisplay = localizedMultiLineAddressDisplay;
+    }
 }

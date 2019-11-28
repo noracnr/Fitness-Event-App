@@ -27,4 +27,12 @@ public class TopLeft {
     public void setY(Integer y) {
         this.y = y;
     }
+
+    public TopLeft() {
+    }
+
+    public TopLeft(Integer x, Integer y) {
+        this.x = x;
+        this.y = y;
+    }
 }

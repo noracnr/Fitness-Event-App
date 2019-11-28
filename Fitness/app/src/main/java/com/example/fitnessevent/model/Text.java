@@ -13,6 +13,7 @@ public class Text {
         html = h;
     }
 
+
     @SerializedName("text")
     @Expose
     private String text;
@@ -36,4 +37,6 @@ public class Text {
     public void setHtml(String html) {
         this.html = html;
     }
+
+
 }

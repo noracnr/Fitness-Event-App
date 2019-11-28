@@ -39,4 +39,13 @@ public class End {
     public void setUtc(String utc) {
         this.utc = utc;
     }
+
+    public End() {
+    }
+
+    public End(String timezone, String local, String utc) {
+        this.timezone = timezone;
+        this.local = local;
+        this.utc = utc;
+    }
 }

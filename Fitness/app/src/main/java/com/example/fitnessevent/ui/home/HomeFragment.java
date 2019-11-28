@@ -4,20 +4,27 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.annotation.Nullable;
 import androidx.annotation.NonNull;
+import androidx.appcompat.widget.SearchView;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.fitnessevent.EventbriteApi;
+import com.algolia.search.saas.Client;
+import com.algolia.search.saas.Index;
+import com.example.fitnessevent.event.EventActivity;
+import com.example.fitnessevent.event.EventAdapter;
+import com.example.fitnessevent.event.EventbriteApi;
 import com.example.fitnessevent.R;
 import com.example.fitnessevent.model.Event;
 import com.example.fitnessevent.model.PaginatedEvents;
@@ -47,6 +54,10 @@ public class HomeFragment extends Fragment {
     private EventAdapter eventAdapter;
 
     private EventbriteApi eventbriteApi;
+    private Client client;
+    private Index index;
+
+    private RecyclerView recyclerView;
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater,
@@ -61,8 +72,9 @@ public class HomeFragment extends Fragment {
                 textView.setText(s);
             }
         });
-        final RecyclerView recyclerView = root.findViewById(R.id.recycler_view);
-        setUpRecyclerView(recyclerView);
+        recyclerView = root.findViewById(R.id.recycler_view);
+        Query query = eventRef.orderBy("changed", Query.Direction.DESCENDING);
+        setUpRecyclerView(recyclerView, query);
 
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl("https://www.eventbriteapi.com/")
@@ -71,13 +83,16 @@ public class HomeFragment extends Fragment {
 
         eventbriteApi = retrofit.create(EventbriteApi.class);
 
-        getEvents();
+        // Algolia:Initial
+        client = new Client("JNVPF41HNP", "b1159b70bbd154bf6c8ed3d195dd1405");
+        index = client.getIndex("FitnessEvents");
 
+        getEvents();
+        setHasOptionsMenu(true);
 
         return root;
     }
-    private void setUpRecyclerView(RecyclerView recyclerView) {
-        Query query = eventRef.orderBy("changed", Query.Direction.DESCENDING);
+    private void setUpRecyclerView(RecyclerView recyclerView, Query query) {
 
         FirestoreRecyclerOptions<Event> options = new FirestoreRecyclerOptions.Builder<Event>()
                 .setQuery(query, Event.class)
@@ -100,12 +115,12 @@ public class HomeFragment extends Fragment {
                 } else {
                     eventIntent.putExtra("image_url","https://github.com/Fitness-Event-APP/Fitness/blob/master/HatchfulExport-All/instagram_profile_image.png");
                 }
-
                 eventIntent.putExtra("title",event.getName().getText());
                 eventIntent.putExtra("description",event.getDescription().getText());
                 eventIntent.putExtra("startTime",event.getStart().getLocal());
                 eventIntent.putExtra("endTime",event.getEnd().getLocal());
-                eventIntent.putExtra("address", event.getId());
+                eventIntent.putExtra("address", event.getVenue().getLatitude());
+                eventIntent.putExtra("address2", event.getVenue().getLongitude());
                 startActivity(eventIntent);
 
             }
@@ -113,13 +128,13 @@ public class HomeFragment extends Fragment {
     }
 
     private void getEvents() {
-/*
+
         Integer[] pages = new Integer[200];
         for (int i = 0; i < pages.length; i++) {
             pages[i] = i+1;
         }
-*/
-        Call<PaginatedEvents> call = eventbriteApi.getPaginatedEvents(108, new Integer[]{1,2,3,4,5,6,7},"venue","IRN4X6MKLUWHLIFGBEDY");
+
+        Call<PaginatedEvents> call = eventbriteApi.getPaginatedEvents(108, pages,"venue","IRN4X6MKLUWHLIFGBEDY");
 
         call.enqueue(new Callback<PaginatedEvents>() {
             @Override
@@ -131,10 +146,8 @@ public class HomeFragment extends Fragment {
 
                 PaginatedEvents paginatedEvents = response.body();
 
-
-
                 Pagination pagination = paginatedEvents.getPagination();
-                db.collection("Pagination").document("test1").
+                db.collection("Pagination").document("SearchTest").
                         set(pagination).
                         addOnSuccessListener(new OnSuccessListener<Void>() {
                             @Override
@@ -167,7 +180,7 @@ public class HomeFragment extends Fragment {
                             });
 
                 }
-
+                //index.addObjectsAsync(new JSONArray(paginatedEvents.getEvents()), null);
 
             }
 
@@ -177,6 +190,52 @@ public class HomeFragment extends Fragment {
             }
         });
     }
+
+    @Override
+    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+        inflater.inflate(R.menu.search, menu);
+        inflater.inflate(R.menu.filter, menu);
+        MenuItem searchItem = menu.findItem(R.id.app_bar_search);
+        SearchView mSearchView = (SearchView) searchItem.getActionView();
+
+        mSearchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                Intent searchIntent = new Intent(getActivity(), SearchActivity.class);
+                searchIntent.putExtra("searchKeywords",query);
+                startActivity(searchIntent);
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                return false;
+            }
+        });
+        super.onCreateOptionsMenu(menu, inflater);
+    }
+
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        if (item.getItemId() == R.id.filter) {
+            Intent filterIntent = new Intent(getActivity(), FilterActivity.class);
+            startActivityForResult(filterIntent, 0);
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
+
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (data.getStringExtra("category").length() != 0) {
+            Query query = eventRef.whereEqualTo("subcategoryId", data.getStringExtra("category"));
+            setUpRecyclerView(recyclerView, query);
+        }
+    }
+
+
     @Override
     public void onStart() {
         super.onStart();

@@ -524,7 +524,53 @@ public class Event {
         this.logo = logo;
     }
 
+    public Event() {
+    }
 
-
-
+    public Event(Text name, Text description, String id, String url, Start start, End end, String organizationId, String created, String changed, String published, Integer capacity, Boolean capacityIsCustom, String status, String currency, Boolean listed, Boolean shareable, Boolean onlineEvent, Integer txTimeLimit, Boolean hideStartDate, Boolean hideEndDate, String locale, Boolean isLocked, String privacySetting, Boolean isSeries, Boolean isSeriesParent, String inventoryType, Boolean isReservedSeating, Boolean showPickaSeat, Boolean showSeatmapThumbnail, Boolean showColorsInSeatmapThumbnail, String source, Boolean isFree, String version, String summary, String logoId, String organizerId, String venueId, String categoryId, String subcategoryId, String formatId, String resourceUri, Boolean isExternallyTicketed, Logo logo, Venue venue) {
+        this.name = name;
+        this.description = description;
+        this.id = id;
+        this.url = url;
+        this.start = start;
+        this.end = end;
+        this.organizationId = organizationId;
+        this.created = created;
+        this.changed = changed;
+        this.published = published;
+        this.capacity = capacity;
+        this.capacityIsCustom = capacityIsCustom;
+        this.status = status;
+        this.currency = currency;
+        this.listed = listed;
+        this.shareable = shareable;
+        this.onlineEvent = onlineEvent;
+        this.txTimeLimit = txTimeLimit;
+        this.hideStartDate = hideStartDate;
+        this.hideEndDate = hideEndDate;
+        this.locale = locale;
+        this.isLocked = isLocked;
+        this.privacySetting = privacySetting;
+        this.isSeries = isSeries;
+        this.isSeriesParent = isSeriesParent;
+        this.inventoryType = inventoryType;
+        this.isReservedSeating = isReservedSeating;
+        this.showPickaSeat = showPickaSeat;
+        this.showSeatmapThumbnail = showSeatmapThumbnail;
+        this.showColorsInSeatmapThumbnail = showColorsInSeatmapThumbnail;
+        this.source = source;
+        this.isFree = isFree;
+        this.version = version;
+        this.summary = summary;
+        this.logoId = logoId;
+        this.organizerId = organizerId;
+        this.venueId = venueId;
+        this.categoryId = categoryId;
+        this.subcategoryId = subcategoryId;
+        this.formatId = formatId;
+        this.resourceUri = resourceUri;
+        this.isExternallyTicketed = isExternallyTicketed;
+        this.logo = logo;
+        this.venue = venue;
+    }
 }

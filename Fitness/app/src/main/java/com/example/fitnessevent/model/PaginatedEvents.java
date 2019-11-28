@@ -24,4 +24,12 @@ public class PaginatedEvents implements Serializable {
     public void setEvents(List<Event> events) {
         this.events = events;
     }
+
+    public PaginatedEvents() {
+    }
+
+    public PaginatedEvents(Pagination pagination, List<Event> events) {
+        this.pagination = pagination;
+        this.events = events;
+    }
 }

@@ -35,7 +35,13 @@
         android:testOnly="true"
         android:theme="@style/AppTheme" >
         <activity
-            android:name="com.example.fitnessevent.ui.home.EventActivity"
+            android:name="com.example.fitnessevent.ui.home.FilterActivity"
+            android:parentActivityName="com.example.fitnessevent.ui.home.SearchActivity" />
+        <activity
+            android:name="com.example.fitnessevent.ui.home.SearchActivity"
+            android:parentActivityName="com.example.fitnessevent.MainActivity" />
+        <activity
+            android:name="com.example.fitnessevent.event.EventActivity"
             android:label="@string/title_activity_event"
             android:theme="@style/AppTheme.NoActionBar" />
         <!--
@@ -49,6 +55,9 @@
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/google_maps_key" />
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
 
         <activity android:name="com.example.fitnessevent.BaseActivity" />
         <activity android:name="com.example.fitnessevent.ui.notifications.EmailPasswordActivity" />
@@ -61,6 +70,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name="com.example.fitnessevent.EventCreateActivity" />
+
+        <service
+            android:name="com.example.fitnessevent.FetchAddressIntentService"
+            android:exported="false" />
 
         <meta-data
             android:name="com.google.android.gms.version"

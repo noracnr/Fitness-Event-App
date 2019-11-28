@@ -23,10 +23,10 @@
         android:label="@string/title_notifications"
         tools:layout="@layout/fragment_notifications" />
     <fragment
-        android:id="@+id/navigation_create"
-        android:name="com.example.fitnessevent.ui.create.CreateFragment"
-        android:label="@string/title_create"
-        tools:layout="@layout/fragment_create" />
+        android:id="@+id/navigation_search"
+        android:name="com.example.fitnessevent.ui.search.SearchFragment"
+        android:label="@string/title_search"
+        tools:layout="@layout/fragment_search" />
 
 
 </navigation>

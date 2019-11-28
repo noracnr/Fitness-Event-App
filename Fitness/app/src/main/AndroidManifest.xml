@@ -15,10 +15,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".ui.home.FilterActivity"
+            android:parentActivityName=".ui.home.SearchActivity"></activity>
+        <activity android:name=".ui.home.SearchActivity"
+            android:parentActivityName=".MainActivity"/>
         <activity
-            android:name=".ui.home.EventActivity"
+            android:name=".event.EventActivity"
             android:label="@string/title_activity_event"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
@@ -30,6 +34,9 @@
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/google_maps_key" />
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
 
         <activity android:name=".BaseActivity" />
         <activity android:name=".ui.notifications.EmailPasswordActivity" />
@@ -42,6 +49,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".EventCreateActivity" />
+        <service android:name=".FetchAddressIntentService"
+            android:exported="false"/>
     </application>
 
 </manifest>

@@ -105,4 +105,18 @@ public class Venue {
     public String getLongitude() {
         return longitude;
     }
+
+    public Venue() {
+    }
+
+    public Venue(Address address, String resourceUri, String id, String ageRestriction, String capacity, String name, String latitude, String longitude) {
+        this.address = address;
+        this.resourceUri = resourceUri;
+        this.id = id;
+        this.ageRestriction = ageRestriction;
+        this.capacity = capacity;
+        this.name = name;
+        this.latitude = latitude;
+        this.longitude = longitude;
+    }
 }

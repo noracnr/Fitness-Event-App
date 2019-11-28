@@ -39,4 +39,13 @@ public class Original {
     public void setHeight(Integer height) {
         this.height = height;
     }
+
+    public Original() {
+    }
+
+    public Original(String url, Integer width, Integer height) {
+        this.url = url;
+        this.width = width;
+        this.height = height;
+    }
 }

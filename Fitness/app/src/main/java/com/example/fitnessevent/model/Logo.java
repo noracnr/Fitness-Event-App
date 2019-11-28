@@ -88,4 +88,17 @@ public class Logo {
     public void setEdgeColorSet(Boolean edgeColorSet) {
         this.edgeColorSet = edgeColorSet;
     }
+
+    public Logo() {
+    }
+
+    public Logo(CropMask cropMask, Original original, String id, String url, String aspectRatio, String edgeColor, boolean edgeColorSet) {
+        this.cropMask = cropMask;
+        this.original = original;
+        this.id = id;
+        this.url = url;
+        this.aspectRatio = aspectRatio;
+        this.edgeColor = edgeColor;
+        this.edgeColorSet = edgeColorSet;
+    }
 }

@@ -62,4 +62,14 @@ public class Pagination {
         this.continuation = continuation;
     }
 
+    public Pagination() {
+    }
+
+    public Pagination(int objectCount, int pageNumber, int pageSize, int pageCount, String continuation) {
+        this.objectCount = objectCount;
+        this.pageNumber = pageNumber;
+        this.pageSize = pageSize;
+        this.pageCount = pageCount;
+        this.continuation = continuation;
+    }
 }
