@@ -3,7 +3,9 @@ package com.example.fitnessevent.model;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-public class Pagination {
+import java.io.Serializable;
+
+public class Pagination implements Serializable {
     @SerializedName("object_count")
     @Expose
     private int objectCount;

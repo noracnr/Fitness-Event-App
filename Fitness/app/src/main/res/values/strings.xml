@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">FitnessEvent</string>
     <string name="title_home">Home</string>
-    <string name="title_dashboard">Dashboard</string>
+    <string name="title_like">Like</string>
     <string name="title_notifications">notifications</string>
     <string name="title_search">search</string>
     <string name="title">Fitness Event in Boston</string>

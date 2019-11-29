@@ -1,6 +1,8 @@
 package com.example.fitnessevent.model;
 
-public class SimpleEvent {
+import java.io.Serializable;
+
+public class SimpleEvent implements Serializable {
     private String id;
     private String nameText;
     private String descriptionText;

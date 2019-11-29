@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/noracnr/AndroidStudioProjects/Fitness/app/src/main/AndroidManifest.xml:2:1-57:12
-INJECTED from /Users/noracnr/AndroidStudioProjects/Fitness/app/src/main/AndroidManifest.xml:2:1-57:12
-INJECTED from /Users/noracnr/AndroidStudioProjects/Fitness/app/src/main/AndroidManifest.xml:2:1-57:12
-INJECTED from /Users/noracnr/AndroidStudioProjects/Fitness/app/src/main/AndroidManifest.xml:2:1-57:12
+ADDED from /Users/noracnr/AndroidStudioProjects/Fitness/app/src/main/AndroidManifest.xml:2:1-58:12
+INJECTED from /Users/noracnr/AndroidStudioProjects/Fitness/app/src/main/AndroidManifest.xml:2:1-58:12
+INJECTED from /Users/noracnr/AndroidStudioProjects/Fitness/app/src/main/AndroidManifest.xml:2:1-58:12
+INJECTED from /Users/noracnr/AndroidStudioProjects/Fitness/app/src/main/AndroidManifest.xml:2:1-58:12
 MERGED from [androidx.navigation:navigation-ui:2.0.0] /Users/noracnr/.gradle/caches/transforms-2/files-2.1/47ec1fc6f511972b55e3569e226dae79/jetified-navigation-ui-2.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [com.firebaseui:firebase-ui-auth:4.3.1] /Users/noracnr/.gradle/caches/transforms-2/files-2.1/a62d0da55b31cde8bcb9aae057d104ed/jetified-firebase-ui-auth-4.3.1/AndroidManifest.xml:2:1-109:12
 MERGED from [com.google.android.material:material:1.0.0] /Users/noracnr/.gradle/caches/transforms-2/files-2.1/314e78ee411997f535ea385b0dca3a47/material-1.0.0/AndroidManifest.xml:17:1-24:12
@@ -81,20 +81,20 @@ MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/noracnr/.gradle/ca
 MERGED from [com.google.firebase:firebase-components:16.0.0] /Users/noracnr/.gradle/caches/transforms-2/files-2.1/a654129f1a4312b8af4cfea82a1a3bae/jetified-firebase-components-16.0.0/AndroidManifest.xml:15:1-23:12
 MERGED from [com.google.firebase:firebase-database-collection:17.0.0] /Users/noracnr/.gradle/caches/transforms-2/files-2.1/8e5501d68d01dce42031dc1b525c12ab/firebase-database-collection-17.0.0/AndroidManifest.xml:2:1-7:12
 MERGED from [com.google.firebase:protolite-well-known-types:17.0.0] /Users/noracnr/.gradle/caches/transforms-2/files-2.1/3e44ed3af8f1e63cf02a602ea5f47f05/protolite-well-known-types-17.0.0/AndroidManifest.xml:2:1-11:12
-INJECTED from /Users/noracnr/AndroidStudioProjects/Fitness/app/src/main/AndroidManifest.xml:2:1-57:12
-INJECTED from /Users/noracnr/AndroidStudioProjects/Fitness/app/src/main/AndroidManifest.xml:2:1-57:12
-INJECTED from /Users/noracnr/AndroidStudioProjects/Fitness/app/src/main/AndroidManifest.xml:2:1-57:12
+INJECTED from /Users/noracnr/AndroidStudioProjects/Fitness/app/src/main/AndroidManifest.xml:2:1-58:12
+INJECTED from /Users/noracnr/AndroidStudioProjects/Fitness/app/src/main/AndroidManifest.xml:2:1-58:12
+INJECTED from /Users/noracnr/AndroidStudioProjects/Fitness/app/src/main/AndroidManifest.xml:2:1-58:12
 	package
 		ADDED from /Users/noracnr/AndroidStudioProjects/Fitness/app/src/main/AndroidManifest.xml:3:5-39
 		INJECTED from /Users/noracnr/AndroidStudioProjects/Fitness/app/src/main/AndroidManifest.xml
 		INJECTED from /Users/noracnr/AndroidStudioProjects/Fitness/app/src/main/AndroidManifest.xml
 	android:versionName
 		INJECTED from /Users/noracnr/AndroidStudioProjects/Fitness/app/src/main/AndroidManifest.xml
-		ADDED from /Users/noracnr/AndroidStudioProjects/Fitness/app/src/main/AndroidManifest.xml:2:1-57:12
+		ADDED from /Users/noracnr/AndroidStudioProjects/Fitness/app/src/main/AndroidManifest.xml:2:1-58:12
 		INJECTED from /Users/noracnr/AndroidStudioProjects/Fitness/app/src/main/AndroidManifest.xml
 	android:versionCode
 		INJECTED from /Users/noracnr/AndroidStudioProjects/Fitness/app/src/main/AndroidManifest.xml
-		ADDED from /Users/noracnr/AndroidStudioProjects/Fitness/app/src/main/AndroidManifest.xml:2:1-57:12
+		ADDED from /Users/noracnr/AndroidStudioProjects/Fitness/app/src/main/AndroidManifest.xml:2:1-58:12
 		INJECTED from /Users/noracnr/AndroidStudioProjects/Fitness/app/src/main/AndroidManifest.xml
 	xmlns:android
 		ADDED from /Users/noracnr/AndroidStudioProjects/Fitness/app/src/main/AndroidManifest.xml:2:11-69
@@ -103,7 +103,7 @@ ADDED from /Users/noracnr/AndroidStudioProjects/Fitness/app/src/main/AndroidMani
 	android:name
 		ADDED from /Users/noracnr/AndroidStudioProjects/Fitness/app/src/main/AndroidManifest.xml:9:22-76
 application
-ADDED from /Users/noracnr/AndroidStudioProjects/Fitness/app/src/main/AndroidManifest.xml:11:5-55:19
+ADDED from /Users/noracnr/AndroidStudioProjects/Fitness/app/src/main/AndroidManifest.xml:11:5-56:19
 MERGED from [com.firebaseui:firebase-ui-auth:4.3.1] /Users/noracnr/.gradle/caches/transforms-2/files-2.1/a62d0da55b31cde8bcb9aae057d104ed/jetified-firebase-ui-auth-4.3.1/AndroidManifest.xml:15:5-107:19
 MERGED from [com.firebaseui:firebase-ui-auth:4.3.1] /Users/noracnr/.gradle/caches/transforms-2/files-2.1/a62d0da55b31cde8bcb9aae057d104ed/jetified-firebase-ui-auth-4.3.1/AndroidManifest.xml:15:5-107:19
 MERGED from [com.google.android.material:material:1.0.0] /Users/noracnr/.gradle/caches/transforms-2/files-2.1/314e78ee411997f535ea385b0dca3a47/material-1.0.0/AndroidManifest.xml:22:5-20
@@ -169,9 +169,9 @@ MERGED from [androidx.lifecycle:lifecycle-process:2.1.0] /Users/noracnr/.gradle/
 	android:label
 		ADDED from /Users/noracnr/AndroidStudioProjects/Fitness/app/src/main/AndroidManifest.xml:14:9-41
 	android:roundIcon
-		ADDED from /Users/noracnr/AndroidStudioProjects/Fitness/app/src/main/AndroidManifest.xml:15:9-54
+		ADDED from /Users/noracnr/AndroidStudioProjects/Fitness/app/src/main/AndroidManifest.xml:15:9-50
 	android:icon
-		ADDED from /Users/noracnr/AndroidStudioProjects/Fitness/app/src/main/AndroidManifest.xml:13:9-43
+		ADDED from /Users/noracnr/AndroidStudioProjects/Fitness/app/src/main/AndroidManifest.xml:13:9-45
 	android:allowBackup
 		ADDED from /Users/noracnr/AndroidStudioProjects/Fitness/app/src/main/AndroidManifest.xml:12:9-35
 	android:theme
@@ -225,29 +225,31 @@ ADDED from /Users/noracnr/AndroidStudioProjects/Fitness/app/src/main/AndroidMani
 	android:name
 		ADDED from /Users/noracnr/AndroidStudioProjects/Fitness/app/src/main/AndroidManifest.xml:44:19-67
 activity#com.example.fitnessevent.MainActivity
-ADDED from /Users/noracnr/AndroidStudioProjects/Fitness/app/src/main/AndroidManifest.xml:45:9-51:20
+ADDED from /Users/noracnr/AndroidStudioProjects/Fitness/app/src/main/AndroidManifest.xml:45:9-52:20
+	android:launchMode
+		ADDED from /Users/noracnr/AndroidStudioProjects/Fitness/app/src/main/AndroidManifest.xml:46:13-43
 	android:name
 		ADDED from /Users/noracnr/AndroidStudioProjects/Fitness/app/src/main/AndroidManifest.xml:45:19-47
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from /Users/noracnr/AndroidStudioProjects/Fitness/app/src/main/AndroidManifest.xml:46:13-50:29
+ADDED from /Users/noracnr/AndroidStudioProjects/Fitness/app/src/main/AndroidManifest.xml:47:13-51:29
 action#android.intent.action.MAIN
-ADDED from /Users/noracnr/AndroidStudioProjects/Fitness/app/src/main/AndroidManifest.xml:47:17-69
+ADDED from /Users/noracnr/AndroidStudioProjects/Fitness/app/src/main/AndroidManifest.xml:48:17-69
 	android:name
-		ADDED from /Users/noracnr/AndroidStudioProjects/Fitness/app/src/main/AndroidManifest.xml:47:25-66
+		ADDED from /Users/noracnr/AndroidStudioProjects/Fitness/app/src/main/AndroidManifest.xml:48:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /Users/noracnr/AndroidStudioProjects/Fitness/app/src/main/AndroidManifest.xml:49:17-77
+ADDED from /Users/noracnr/AndroidStudioProjects/Fitness/app/src/main/AndroidManifest.xml:50:17-77
 	android:name
-		ADDED from /Users/noracnr/AndroidStudioProjects/Fitness/app/src/main/AndroidManifest.xml:49:27-74
+		ADDED from /Users/noracnr/AndroidStudioProjects/Fitness/app/src/main/AndroidManifest.xml:50:27-74
 activity#com.example.fitnessevent.EventCreateActivity
-ADDED from /Users/noracnr/AndroidStudioProjects/Fitness/app/src/main/AndroidManifest.xml:52:9-57
+ADDED from /Users/noracnr/AndroidStudioProjects/Fitness/app/src/main/AndroidManifest.xml:53:9-57
 	android:name
-		ADDED from /Users/noracnr/AndroidStudioProjects/Fitness/app/src/main/AndroidManifest.xml:52:19-54
+		ADDED from /Users/noracnr/AndroidStudioProjects/Fitness/app/src/main/AndroidManifest.xml:53:19-54
 service#com.example.fitnessevent.FetchAddressIntentService
-ADDED from /Users/noracnr/AndroidStudioProjects/Fitness/app/src/main/AndroidManifest.xml:53:9-54:39
+ADDED from /Users/noracnr/AndroidStudioProjects/Fitness/app/src/main/AndroidManifest.xml:54:9-55:39
 	android:exported
-		ADDED from /Users/noracnr/AndroidStudioProjects/Fitness/app/src/main/AndroidManifest.xml:54:13-37
+		ADDED from /Users/noracnr/AndroidStudioProjects/Fitness/app/src/main/AndroidManifest.xml:55:13-37
 	android:name
-		ADDED from /Users/noracnr/AndroidStudioProjects/Fitness/app/src/main/AndroidManifest.xml:53:18-59
+		ADDED from /Users/noracnr/AndroidStudioProjects/Fitness/app/src/main/AndroidManifest.xml:54:18-59
 uses-sdk
 INJECTED from /Users/noracnr/AndroidStudioProjects/Fitness/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /Users/noracnr/AndroidStudioProjects/Fitness/app/src/main/AndroidManifest.xml

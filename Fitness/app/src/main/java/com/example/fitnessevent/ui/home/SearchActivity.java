@@ -167,7 +167,9 @@ public class SearchActivity extends AppCompatActivity {
                             eventIntent.putExtra("description",clickedSimpleEvent.getDescriptionText());
                             eventIntent.putExtra("startTime",clickedSimpleEvent.getStartTime());
                             eventIntent.putExtra("endTime",clickedSimpleEvent.getEndTime());
-                            eventIntent.putExtra("address", clickedSimpleEvent.getId());
+                            eventIntent.putExtra("latitude", clickedSimpleEvent.getLatitude());
+                            eventIntent.putExtra("longitude", clickedSimpleEvent.getLongtitude());
+                            eventIntent.putExtra("id", clickedSimpleEvent.getId());
                             startActivity(eventIntent);
                         }
                     });

@@ -37,6 +37,8 @@ import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.Query;
 
+import java.io.Serializable;
+
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -119,8 +121,11 @@ public class HomeFragment extends Fragment {
                 eventIntent.putExtra("description",event.getDescription().getText());
                 eventIntent.putExtra("startTime",event.getStart().getLocal());
                 eventIntent.putExtra("endTime",event.getEnd().getLocal());
-                eventIntent.putExtra("address", event.getVenue().getLatitude());
-                eventIntent.putExtra("address2", event.getVenue().getLongitude());
+                eventIntent.putExtra("latitude", event.getVenue().getLatitude());
+                eventIntent.putExtra("longitude", event.getVenue().getLongitude());
+                eventIntent.putExtra("id", event.getId());
+                eventIntent.putExtra("object", event);
+                eventIntent.putExtra("length",eventAdapter.getItemCount());
                 startActivity(eventIntent);
 
             }
@@ -229,9 +234,18 @@ public class HomeFragment extends Fragment {
     @Override
     public void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        if (data.getStringExtra("category").length() != 0) {
-            Query query = eventRef.whereEqualTo("subcategoryId", data.getStringExtra("category"));
-            setUpRecyclerView(recyclerView, query);
+        if (data != null) {
+            if (data.hasExtra("category") && data.hasExtra("isCancel")) {
+                if (data.getBooleanExtra("isCancel", false)) {
+                    Log.d(TAG, "isCancel Clicked");
+                    Query query = eventRef.orderBy("changed", Query.Direction.DESCENDING);
+                    setUpRecyclerView(recyclerView, query);
+                } else {
+                    Query query = eventRef.whereEqualTo("subcategoryId", data.getStringExtra("category"));
+                    setUpRecyclerView(recyclerView, query);
+                }
+
+            }
         }
     }
 

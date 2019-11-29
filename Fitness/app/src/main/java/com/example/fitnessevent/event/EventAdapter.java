@@ -81,6 +81,8 @@ public class EventAdapter extends FirestoreRecyclerAdapter<Event, EventAdapter.E
         return new EventHolder(v);
     }
 
-
-
+    @Override
+    public int getItemCount() {
+        return super.getItemCount();
+    }
 }

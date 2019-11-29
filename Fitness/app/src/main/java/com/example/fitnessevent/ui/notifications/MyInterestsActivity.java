@@ -26,9 +26,12 @@ public class MyInterestsActivity extends BaseActivity{
                 if (documentSnapshot.exists()) {
 
                     ArrayList<String> interests = (ArrayList<String>)documentSnapshot.get("interests");
+                    if (interests.isEmpty())
+                        return;
                     StringBuilder builder = new StringBuilder();
+                    int i = 1;
                     for (String s: interests) {
-                        builder.append(s + "\n");
+                        builder.append(i++ + ": "+ s + "\n\n");
                     }
                     mInterests.setText(builder.toString().trim());
                 }

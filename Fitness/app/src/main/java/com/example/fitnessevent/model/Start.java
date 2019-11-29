@@ -3,7 +3,9 @@ package com.example.fitnessevent.model;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-public class Start {
+import java.io.Serializable;
+
+public class Start implements Serializable {
     @SerializedName("timezone")
     @Expose
     private String timezone;

@@ -8,8 +8,8 @@
 
     <item
         android:id="@+id/navigation_like"
-        android:icon="@drawable/classification"
-        android:title="@string/title_dashboard" />
+        android:icon="@drawable/ic_favorite_border"
+        android:title="@string/title_like" />
 
     <item
         android:id="@+id/navigation_search"

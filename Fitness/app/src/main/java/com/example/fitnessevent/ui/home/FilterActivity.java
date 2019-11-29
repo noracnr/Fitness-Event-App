@@ -14,6 +14,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.Toast;
 
@@ -28,9 +29,11 @@ import java.util.Map;
 public class FilterActivity extends AppCompatActivity {
     private static final String TAG = "FilterActivity";
     private Spinner spinner_category;
+    private Button btn_cancel;
 
     private Map<String, String> categoryValue;
     private String selectedCategoryValue;
+    private boolean isCancel = false;
 
     private FirebaseFirestore db = FirebaseFirestore.getInstance();
     private CollectionReference eventRef = db.collection("events");
@@ -46,6 +49,13 @@ public class FilterActivity extends AppCompatActivity {
         InitCategoryValue();
         setUpCategorySpinner();
 
+        btn_cancel = findViewById(R.id.btn_cancel);
+        btn_cancel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                isCancel = true;
+            }
+        });
 
     }
 
@@ -127,10 +137,21 @@ public class FilterActivity extends AppCompatActivity {
         if (item.getItemId() == R.id.submit) {
             Intent filterIntent = new Intent();
             filterIntent.putExtra("category", selectedCategoryValue);
+            filterIntent.putExtra("isCancel", isCancel);
             setResult(0,filterIntent);
             finish();
         }
         return super.onOptionsItemSelected(item);
 
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        Intent filterIntent = new Intent();
+        filterIntent.putExtra("category", selectedCategoryValue);
+        filterIntent.putExtra("isCancel", isCancel);
+        setResult(0,filterIntent);
+        finish();
     }
 }

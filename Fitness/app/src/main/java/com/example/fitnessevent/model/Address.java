@@ -3,9 +3,10 @@ package com.example.fitnessevent.model;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
+import java.io.Serializable;
 import java.util.List;
 
-public class Address {
+public class Address implements Serializable {
     @SerializedName("address_1")
     @Expose
     private String address1;

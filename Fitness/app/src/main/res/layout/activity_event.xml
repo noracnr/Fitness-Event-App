@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:maps="http://schemas.android.com/apk/res-auto"
 
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
 
@@ -151,7 +152,15 @@
             app:layout_constraintTop_toBottomOf="@+id/time_icon"
             app:srcCompat="@drawable/ic_location" />
 
-
+        <ImageButton
+            android:id="@+id/like_button"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="228dp"
+            android:background="@drawable/btn_round_white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/imageViewHR"
+            maps:srcCompat="@drawable/ic_favorite_border" />
 
 
         <!--            &lt;!&ndash;            <ImageView&ndash;&gt;-->

@@ -3,7 +3,9 @@ package com.example.fitnessevent.model;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-public class TopLeft {
+import java.io.Serializable;
+
+public class TopLeft implements Serializable {
     @SerializedName("x")
     @Expose
     private Integer x;

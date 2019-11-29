@@ -3,7 +3,9 @@ package com.example.fitnessevent.model;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-public class Original {
+import java.io.Serializable;
+
+public class Original implements Serializable {
     @SerializedName("url")
     @Expose
     private String url;
