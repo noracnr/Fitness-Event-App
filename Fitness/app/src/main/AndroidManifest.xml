@@ -39,9 +39,7 @@
             android:resource="@array/preloaded_fonts" />
 
         <activity android:name=".BaseActivity" />
-        <activity android:name=".ui.notifications.EmailPasswordActivity" />
         <activity android:name=".ui.notifications.MyInterestsActivity" />
-        <activity android:name=".ui.notifications.MyLikesActivity" />
         <activity android:name=".MainActivity"
             android:launchMode="singleTop">
             <intent-filter>
@@ -51,8 +49,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".EventCreateActivity" />
-        <service android:name=".FetchAddressIntentService"
-            android:exported="false"/>
+
     </application>
 
 </manifest>

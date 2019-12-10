@@ -80,13 +80,13 @@
         <TextView
             android:id="@+id/contentOfDescription"
             android:layout_width="379dp"
-            android:layout_height="62dp"
+            android:layout_height="138dp"
             android:layout_marginStart="16dp"
-            android:layout_marginLeft="16dp"
             android:layout_marginEnd="16dp"
-            android:layout_marginRight="16dp"
             android:text="Join us for the Boston Jogger Tour, presented by Marathon Sports and Hoka! We're running the streets throughout the fall season. Come to each event for some fun, custom swag, raffles, and more! We'll celebrate the final run at Sam Adams - all paces welcome! Here's the full list of our event series:Marathon Sports Boston 9/18 6:30PMMarathon Sports Wellesley 10/16 6:30PMMarathon Sports Cambridge 10/30 6:30PMMarathon Sports Brookline 11/7 6:30PMCelebration Run  Party at Sam Adams 11/23 10AM"
             android:textSize="12sp"
+            app:autoSizeTextType="uniform"
+            app:autoSizePresetSizes="@array/autosize_text_sizes"
             app:fontFamily="sans-serif-light"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -97,33 +97,33 @@
             android:layout_width="280dp"
             android:layout_height="40dp"
             android:layout_marginStart="16dp"
-            android:layout_marginLeft="16dp"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
-            android:layout_marginRight="16dp"
+            android:ellipsize="end"
             android:ems="10"
-            android:hint="2019-11-23T10:00:00 - 2019-11-23T12:00:00"
+            android:hint="2019-11-23T10:00:00\n2019-11-23T12:00:00"
             android:importantForAutofill="no"
-            android:inputType="time"
-            android:text="2019-11-23T10:00:00 - 2019-11-23T12:00:00"
+            android:maxLines="2"
+            android:text="2019-11-23T10:00:00\n2019-11-23T12:00:00"
+            android:textSize="15sp"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.511"
             app:layout_constraintStart_toEndOf="@+id/time_icon"
             app:layout_constraintTop_toBottomOf="@+id/contentOfDescription" />
 
         <TextView
             android:id="@+id/location"
-            android:layout_width="280dp"
-            android:layout_height="40dp"
+            android:layout_width="283dp"
+            android:layout_height="64dp"
             android:layout_marginStart="16dp"
-            android:layout_marginLeft="16dp"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
-            android:layout_marginRight="16dp"
             android:autofillHints=""
             android:ems="10"
-            android:inputType="textPostalAddress"
             android:text="Samual Adam Boston"
+            android:textSize="15sp"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.536"
             app:layout_constraintStart_toEndOf="@+id/location_icon"
             app:layout_constraintTop_toBottomOf="@+id/time" />
 
@@ -148,6 +148,8 @@
             android:layout_marginTop="16dp"
             android:contentDescription="@null"
             android:scaleType="fitXY"
+            android:background="@drawable/btn_round_white"
+            android:onClick="ToMapApp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/time_icon"
             app:srcCompat="@drawable/ic_location" />
@@ -161,6 +163,14 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="@+id/imageViewHR"
             maps:srcCompat="@drawable/ic_favorite_border" />
+
+        <fragment
+            android:id="@+id/map_fragment"
+            class="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/location" />
 
 
         <!--            &lt;!&ndash;            <ImageView&ndash;&gt;-->

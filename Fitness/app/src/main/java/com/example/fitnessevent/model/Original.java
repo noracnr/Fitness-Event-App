@@ -45,9 +45,10 @@ public class Original implements Serializable {
     public Original() {
     }
 
-    public Original(String url, Integer width, Integer height) {
+    public Original(Integer height, String url, Integer width ) {
         this.url = url;
         this.width = width;
         this.height = height;
     }
+
 }

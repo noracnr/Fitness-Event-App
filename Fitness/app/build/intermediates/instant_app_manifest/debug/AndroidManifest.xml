@@ -61,9 +61,7 @@
             android:resource="@array/preloaded_fonts" />
 
         <activity android:name="com.example.fitnessevent.BaseActivity" />
-        <activity android:name="com.example.fitnessevent.ui.notifications.EmailPasswordActivity" />
         <activity android:name="com.example.fitnessevent.ui.notifications.MyInterestsActivity" />
-        <activity android:name="com.example.fitnessevent.ui.notifications.MyLikesActivity" />
         <activity
             android:name="com.example.fitnessevent.MainActivity"
             android:launchMode="singleTop" >
@@ -74,10 +72,6 @@
             </intent-filter>
         </activity>
         <activity android:name="com.example.fitnessevent.EventCreateActivity" />
-
-        <service
-            android:name="com.example.fitnessevent.FetchAddressIntentService"
-            android:exported="false" />
 
         <meta-data
             android:name="com.google.android.gms.version"
@@ -181,6 +175,9 @@
                 android:value="com.google.firebase.components.ComponentRegistrar" />
             <meta-data
                 android:name="com.google.firebase.components:com.google.firebase.firestore.FirestoreRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.storage.StorageRegistrar"
                 android:value="com.google.firebase.components.ComponentRegistrar" />
             <meta-data
                 android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar"

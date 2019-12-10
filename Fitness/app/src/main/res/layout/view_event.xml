@@ -54,6 +54,8 @@
             android:paddingTop="8dp"
             android:text="Allson Gardner St"
             android:textAllCaps="true"
-            android:textSize="18sp" />
+            app:autoSizeTextType="uniform"
+            android:maxLines="1"
+            android:ellipsize="end"/>
     </LinearLayout>
 </androidx.cardview.widget.CardView>

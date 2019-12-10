@@ -45,7 +45,7 @@ public class CropMask implements Serializable {
     public CropMask() {
     }
 
-    public CropMask(TopLeft topLeft, Integer width, Integer height) {
+    public CropMask(Integer height,TopLeft topLeft, Integer width) {
         this.topLeft = topLeft;
         this.width = width;
         this.height = height;

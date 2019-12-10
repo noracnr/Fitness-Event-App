@@ -94,7 +94,7 @@ public class Logo implements Serializable {
     public Logo() {
     }
 
-    public Logo(CropMask cropMask, Original original, String id, String url, String aspectRatio, String edgeColor, boolean edgeColorSet) {
+    public Logo(String aspectRatio,CropMask cropMask, String edgeColor,boolean edgeColorSet,String id,Original original, String url) {
         this.cropMask = cropMask;
         this.original = original;
         this.id = id;
@@ -103,4 +103,5 @@ public class Logo implements Serializable {
         this.edgeColor = edgeColor;
         this.edgeColorSet = edgeColorSet;
     }
+
 }

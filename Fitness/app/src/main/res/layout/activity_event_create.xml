@@ -2,9 +2,12 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scview"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:context=".EventCreateActivity"
+    >
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -12,21 +15,34 @@
 
         <EditText
             android:id="@+id/editText"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
             android:ems="10"
-            android:inputType="textPersonName"
             android:hint="@string/event_title"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintLeft_toLeftOf="parent"/>
+            android:inputType="textPersonName"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Spinner
+            android:id="@+id/spinner_category"
+            android:layout_width="152dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="24dp"
+            android:background="@drawable/textview_boarder"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/editText"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
             android:id="@+id/location_create"
-            android:layout_width="50dp"
-            android:layout_height="38dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="10dp"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
             android:background="@drawable/location"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/editText" />
@@ -36,94 +52,119 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="24dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="16dp"
+            android:fontFamily="sans-serif-black"
             android:gravity="center"
             android:text="@string/Location"
-            android:textSize="70px"
+            android:textSize="20sp"
             app:layout_constraintLeft_toRightOf="@+id/location_create"
             app:layout_constraintTop_toBottomOf="@id/editText" />
 
-        <EditText
-            android:id="@+id/input_location"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@id/location_textview"
+        <RelativeLayout
+            android:id="@+id/relLayout1"
+            android:layout_width="373dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:elevation="10dp"
             app:layout_constraintLeft_toLeftOf="parent"
-            />
+            app:layout_constraintTop_toBottomOf="@+id/location_textview">
+
+            <ImageView
+                android:id="@+id/ic_magnify"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="0dp"
+                android:src="@drawable/ic_search_black" />
+
+            <EditText
+                android:id="@+id/input_search"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@+id/ic_magnify"
+                android:background="@drawable/white_boarder"
+                android:hint="Enter Address, City or Zip Code"
+                android:imeOptions="actionSearch"
+                android:textColor="#000"
+                android:textSize="15sp" />
+        </RelativeLayout>
 
         <ImageView
             android:id="@+id/time_create"
-            android:layout_width="50dp"
-            android:layout_height="38dp"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="10dp"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
             android:background="@drawable/time"
             app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/input_location" />
+            app:layout_constraintTop_toBottomOf="@+id/relLayout1" />
 
         <TextView
             android:id="@+id/time_textview"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@+id/input_location"
-            app:layout_constraintLeft_toRightOf="@+id/time_create"
-            android:layout_marginTop="10dp"
             android:layout_marginLeft="24dp"
+            android:layout_marginTop="16dp"
+            android:fontFamily="sans-serif-black"
             android:text="@string/time"
-            android:textSize="70px"
-            />
+            android:textSize="20sp"
+            app:layout_constraintLeft_toRightOf="@+id/time_create"
+            app:layout_constraintTop_toBottomOf="@+id/relLayout1" />
+
         <LinearLayout
             android:id="@+id/ll_date"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginTop="16dp"
             android:orientation="horizontal"
-            android:layout_marginTop="10dp"
             app:layout_constraintTop_toBottomOf="@+id/time_create">
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="120dp"
                 android:layout_height="wrap_content"
-                android:text="@string/start_date"
                 android:layout_marginStart="20dp"
-
-                android:textSize="20sp" />
+                android:fontFamily="sans-serif-black"
+                android:text="@string/start_date"
+                android:textSize="18sp" />
 
             <TextView
                 android:id="@+id/tv_date"
-                android:layout_width="150dp"
-                android:layout_height="wrap_content"
-                android:padding="8dp"
-                android:background="@drawable/textview_boarder"
+                android:layout_width="230dp"
+                android:layout_height="match_parent"
                 android:layout_marginLeft="25dp"
-
-                android:textSize="20sp" />
+                android:background="@drawable/textview_boarder"
+                android:fontFamily="sans-serif"
+                android:padding="8dp"
+                android:textSize="18sp" />
 
         </LinearLayout>
 
         <LinearLayout
             android:id="@+id/ll_time"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="40dp"
             android:layout_marginTop="8dp"
             android:orientation="horizontal"
             app:layout_constraintTop_toBottomOf="@+id/ll_date">
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="120dp"
                 android:layout_height="wrap_content"
-                android:text="@string/start_time"
                 android:layout_marginLeft="20dp"
-                android:textSize="20sp" />
+                android:fontFamily="sans-serif-black"
+                android:text="@string/start_time"
+                android:textSize="18sp" />
 
             <TextView
                 android:id="@+id/tv_time"
-                android:layout_width="150dp"
+                android:layout_width="230dp"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
                 android:background="@drawable/textview_boarder"
-                android:layout_marginLeft="20dp"
-
                 android:padding="8dp"
-                android:textSize="20sp" />
+                android:textSize="18sp" />
 
         </LinearLayout>
 
@@ -131,22 +172,23 @@
             android:id="@+id/ll1_date"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
             android:orientation="horizontal"
-            android:layout_marginTop="30dp"
             app:layout_constraintTop_toBottomOf="@+id/ll_time">
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="120dp"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:fontFamily="sans-serif-black"
                 android:text="@string/end_date"
-                android:layout_marginStart="26dp"
-                android:textSize="20sp" />
+                android:textSize="18sp" />
 
             <TextView
                 android:id="@+id/tv1_date"
-                android:layout_width="150dp"
+                android:layout_width="230dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="27dp"
+                android:layout_marginStart="25dp"
                 android:background="@drawable/textview_boarder"
                 android:padding="8dp"
                 android:textSize="18sp" />
@@ -162,146 +204,141 @@
             app:layout_constraintTop_toBottomOf="@+id/ll1_date">
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="120dp"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:fontFamily="sans-serif-black"
                 android:text="@string/end_time"
-                android:layout_marginStart="26dp"
-                android:textSize="20sp" />
+                android:textSize="18sp" />
 
             <TextView
                 android:id="@+id/tv1_time"
-                android:layout_width="150dp"
+                android:layout_width="230dp"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
                 android:background="@drawable/textview_boarder"
                 android:padding="8dp"
-                android:layout_marginStart="23dp"
-                android:textSize="20sp"
-                />
+                android:textSize="18sp" />
 
         </LinearLayout>
 
-
-
-
-
-
-
-
-
-
-
         <ImageView
             android:id="@+id/description_create"
-            android:layout_width="50dp"
-            android:layout_height="38dp"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/ic_description"
             app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/ll1_time"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="10dp"
-            android:background="@drawable/ic_description"/>
+            app:layout_constraintTop_toBottomOf="@+id/ll1_time" />
 
         <TextView
             android:id="@+id/description_textview"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@+id/ll1_time"
-            app:layout_constraintLeft_toRightOf="@+id/description_create"
-            android:layout_marginTop="10dp"
-            android:layout_marginStart="24dp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="16dp"
+            android:fontFamily="sans-serif-black"
             android:text="@string/Description"
-            android:textSize="70px"
-            />
+            android:textSize="20sp"
+            app:layout_constraintLeft_toRightOf="@+id/description_create"
+            app:layout_constraintTop_toBottomOf="@+id/ll1_time" />
 
         <EditText
             android:id="@+id/input_description"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@id/description_create"
+            android:layout_width="379dp"
+            android:layout_height="101dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:gravity="top|left"
+            android:hint="Description..."
+            android:inputType="textMultiLine"
+            android:minLines="1"
+            android:scrollbars="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
-
-            />
+            app:layout_constraintTop_toBottomOf="@id/description_create" />
 
         <ImageView
-            android:id="@+id/ticket_create"
-            android:layout_width="50dp"
-            android:layout_height="38dp"
+            android:id="@+id/event_image_icon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/ic_event_image"
             app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/input_description"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="10dp"
-            android:background="@drawable/ticket"/>
+            app:layout_constraintTop_toBottomOf="@+id/input_description" />
 
         <TextView
-            android:id="@+id/ticket_textview"
+            android:id="@+id/event_textview"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@+id/input_description"
-            app:layout_constraintLeft_toRightOf="@+id/ticket_create"
-            android:layout_marginTop="10dp"
-            android:layout_marginStart="24dp"
-            android:text="@string/ticket"
-            android:textSize="70px"
-            />
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="16dp"
+            android:fontFamily="sans-serif-black"
+            android:text="Main Event Image"
+            android:textSize="20sp"
+            app:layout_constraintLeft_toRightOf="@id/event_image_icon"
+            app:layout_constraintTop_toBottomOf="@+id/input_description" />
 
-        <TextView
-            android:id="@+id/quantity_create"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@+id/ticket_textview"
+        <ImageView
+            android:id="@+id/event_imageview"
+            android:layout_width="381dp"
+            android:layout_height="199dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="8dp"
             app:layout_constraintLeft_toLeftOf="parent"
-            android:layout_marginTop="15dp"
-            android:layout_marginStart="24dp"
-            android:text="@string/quantity"
-            android:textSize="60px"
-            />
+            app:layout_constraintTop_toBottomOf="@+id/event_textview" />
 
-        <EditText
-            android:id="@+id/input_quantity"
-            android:layout_width="50dp"
-            android:layout_height="30dp"
-            android:layout_marginStart="190dp"
-            android:layout_marginTop="17dp"
-            android:background="@drawable/textview_boarder"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/ticket_textview" />
-
-        <TextView
-            android:id="@+id/price_create"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@+id/quantity_create"
-            app:layout_constraintLeft_toLeftOf="parent"
-            android:layout_marginTop="10dp"
-            android:layout_marginStart="38dp"
-            android:text="@string/price"
-            android:textSize="60px"
-            />
-
-        <EditText
-            android:id="@+id/input_price"
-            android:layout_width="50dp"
-            android:layout_height="30dp"
-            android:layout_marginStart="190dp"
+        <Button
+            android:id="@+id/choose_button"
+            android:layout_width="180dp"
+            android:layout_height="25dp"
+            android:layout_marginLeft="16dp"
             android:layout_marginTop="8dp"
             android:background="@drawable/textview_boarder"
+            android:onClick="toImageFile"
+            android:text="Choose Image"
             app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/input_quantity"
-            android:inputType="number"/>
+            app:layout_constraintTop_toBottomOf="@id/event_imageview" />
+
+        <Button
+            android:id="@+id/upload_button"
+            android:layout_width="180dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="22dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/textview_boarder"
+            android:text="Upload"
+            app:layout_constraintStart_toEndOf="@+id/choose_button"
+            app:layout_constraintTop_toBottomOf="@+id/event_imageview" />
+
         <Button
             android:id="@+id/submit_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@+id/input_price"
+            app:layout_constraintTop_toBottomOf="@+id/upload_button"
             app:layout_constraintRight_toRightOf="parent"
             android:background="@drawable/textview_boarder"
             android:text="Submit"
             android:gravity="center"
-            android:layout_marginRight="10dp"
+            android:layout_marginEnd="10dp"
             android:layout_marginTop="20dp"
             android:onClick="submit"
-
-
             />
+
+        <Button
+            android:id="@+id/update_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="40dp"
+            android:background="@drawable/textview_boarder"
+            android:onClick="update"
+            android:text="Update"
+            app:layout_constraintRight_toLeftOf="@+id/submit_button"
+            app:layout_constraintTop_toBottomOf="@id/upload_button" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

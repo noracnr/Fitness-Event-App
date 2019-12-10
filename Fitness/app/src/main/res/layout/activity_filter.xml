@@ -11,7 +11,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/fui_min_height_target"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="48dp"
         android:text="category"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -24,44 +24,17 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/hint_category" />
 
-    <TextView
-        android:id="@+id/hint_date"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="48dp"
-        android:layout_marginTop="32dp"
-        android:text="date"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/category_spinner" />
-
-    <Spinner
-        android:id="@+id/spinner"
-        android:layout_width="325dp"
-        android:layout_height="43dp"
-        android:layout_marginStart="48dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/hint_date" />
-
-    <TextView
-        android:id="@+id/hint_address"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="48dp"
-        android:layout_marginTop="32dp"
-        android:text="address"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spinner" />
-
     <Button
         android:id="@+id/btn_cancel"
         android:layout_width="98dp"
         android:layout_height="45dp"
-        android:layout_marginTop="196dp"
+        android:layout_marginTop="48dp"
         android:background="@drawable/textview_boarder"
         android:text="CANCEL"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/hint_address" />
+        app:layout_constraintTop_toBottomOf="@+id/category_spinner" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

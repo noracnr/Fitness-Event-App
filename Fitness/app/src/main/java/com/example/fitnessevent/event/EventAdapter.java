@@ -71,7 +71,19 @@ public class EventAdapter extends FirestoreRecyclerAdapter<Event, EventAdapter.E
         }
         holder.textViewdate.setText(model.getStart().getLocal()+"--"+model.getEnd().getLocal());
         holder.textViewtitle.setText(model.getName().getText());
-        holder.textViewaddress.setText(model.getId());
+        if (model.getVenue() != null){
+            if (model.getVenue().getAddress() != null) {
+                if (model.getVenue().getAddress().getLocalizedAddressDisplay() != null)
+                    holder.textViewaddress.setText(model.getVenue().getAddress().getLocalizedAddressDisplay());
+                else
+                    holder.textViewaddress.setText("null");
+            }
+            else {
+                holder.textViewaddress.setText("null");
+            }
+        }
+        else
+            holder.textViewaddress.setText("null");
     }
 
     @NonNull

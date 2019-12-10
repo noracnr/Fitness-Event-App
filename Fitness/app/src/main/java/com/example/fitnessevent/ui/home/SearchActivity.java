@@ -48,7 +48,6 @@ public class SearchActivity extends AppCompatActivity {
     private RecyclerView recyclerView;
     private EditText searchField;
     private ImageButton btn_search;
-    private TextView filterResult;
 
     private EventAdapter eventAdapter;
     private SearchEventAdapter searchEventAdapter;
@@ -70,7 +69,6 @@ public class SearchActivity extends AppCompatActivity {
         recyclerView = findViewById(R.id.recyclerview_search);
         searchField = findViewById(R.id.search_field);
         btn_search = findViewById(R.id.btn_search);
-        filterResult = findViewById(R.id.filterResult);
 
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
@@ -114,7 +112,7 @@ public class SearchActivity extends AppCompatActivity {
         } else {
             Log.d(TAG,"getFragmentData: don't find and intent extras");
             //query = eventRef.orderBy("changed", Query.Direction.DESCENDING);
-            filterResult.setText("Please enter keywords for search");
+
         }
     }
 

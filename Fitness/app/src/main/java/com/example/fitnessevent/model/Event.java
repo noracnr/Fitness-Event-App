@@ -529,7 +529,7 @@ public class Event implements Serializable {
     public Event() {
     }
 
-    public Event(Text name, Text description, String id, String url, Start start, End end, String organizationId, String created, String changed, String published, Integer capacity, Boolean capacityIsCustom, String status, String currency, Boolean listed, Boolean shareable, Boolean onlineEvent, Integer txTimeLimit, Boolean hideStartDate, Boolean hideEndDate, String locale, Boolean isLocked, String privacySetting, Boolean isSeries, Boolean isSeriesParent, String inventoryType, Boolean isReservedSeating, Boolean showPickaSeat, Boolean showSeatmapThumbnail, Boolean showColorsInSeatmapThumbnail, String source, Boolean isFree, String version, String summary, String logoId, String organizerId, String venueId, String categoryId, String subcategoryId, String formatId, String resourceUri, Boolean isExternallyTicketed, Logo logo, Venue venue) {
+    public Event(Text name, Text description, String id, String url, Start start, End end, String organizationId, String created, String changed, String published, Integer capacity, Boolean capacityIsCustom, String status, String currency, Boolean listed, Boolean shareable, Boolean onlineEvent, Integer txTimeLimit, Boolean hideStartDate, Boolean hideEndDate, String locale, Boolean isLocked, String privacySetting, Boolean isSeries, Boolean isSeriesParent, String inventoryType, Boolean isReservedSeating, Boolean showPickaSeat, Boolean showSeatmapThumbnail, Boolean showColorsInSeatmapThumbnail, String source, Boolean isFree, String version, String summary, String logoId, String organizerId, String venueId, String categoryId, String subcategoryId, String formatId, String resourceUri, Boolean isExternallyTicketed, Venue venue,Logo logo) {
         this.name = name;
         this.description = description;
         this.id = id;
@@ -572,7 +572,7 @@ public class Event implements Serializable {
         this.formatId = formatId;
         this.resourceUri = resourceUri;
         this.isExternallyTicketed = isExternallyTicketed;
-        this.logo = logo;
         this.venue = venue;
+        this.logo = logo;
     }
 }

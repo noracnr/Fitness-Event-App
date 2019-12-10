@@ -8,12 +8,12 @@
         "source": "/Users/noracnr/.gradle/caches/transforms-2/files-2.1/6baa1ce929cb6078a68a5b03b3bd41df/appcompat-1.0.2/res/layout/abc_popup_menu_header_item_layout.xml"
     },
     {
-        "merged": "/Users/noracnr/AndroidStudioProjects/Fitness/app/build/intermediates/res/merged/debug/color_abc_primary_text_material_light.xml.flat",
-        "source": "/Users/noracnr/.gradle/caches/transforms-2/files-2.1/6baa1ce929cb6078a68a5b03b3bd41df/appcompat-1.0.2/res/color/abc_primary_text_material_light.xml"
-    },
-    {
         "merged": "/Users/noracnr/AndroidStudioProjects/Fitness/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_abc_scrubber_primary_mtrl_alpha.9.png.flat",
         "source": "/Users/noracnr/.gradle/caches/transforms-2/files-2.1/6baa1ce929cb6078a68a5b03b3bd41df/appcompat-1.0.2/res/drawable-xhdpi-v4/abc_scrubber_primary_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "/Users/noracnr/AndroidStudioProjects/Fitness/app/build/intermediates/res/merged/debug/color_abc_primary_text_material_light.xml.flat",
+        "source": "/Users/noracnr/.gradle/caches/transforms-2/files-2.1/6baa1ce929cb6078a68a5b03b3bd41df/appcompat-1.0.2/res/color/abc_primary_text_material_light.xml"
     },
     {
         "merged": "/Users/noracnr/AndroidStudioProjects/Fitness/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_common_google_signin_btn_icon_light_normal_background.9.png.flat",
@@ -76,12 +76,12 @@
         "source": "/Users/noracnr/.gradle/caches/transforms-2/files-2.1/6baa1ce929cb6078a68a5b03b3bd41df/appcompat-1.0.2/res/color/abc_secondary_text_material_dark.xml"
     },
     {
-        "merged": "/Users/noracnr/AndroidStudioProjects/Fitness/app/build/intermediates/res/merged/debug/drawable_common_google_signin_btn_icon_light_normal.xml.flat",
-        "source": "/Users/noracnr/.gradle/caches/transforms-2/files-2.1/8eb866707b690ca0a19e0e3fe5cc8413/play-services-base-17.1.0/res/drawable/common_google_signin_btn_icon_light_normal.xml"
-    },
-    {
         "merged": "/Users/noracnr/AndroidStudioProjects/Fitness/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_abc_list_pressed_holo_light.9.png.flat",
         "source": "/Users/noracnr/.gradle/caches/transforms-2/files-2.1/6baa1ce929cb6078a68a5b03b3bd41df/appcompat-1.0.2/res/drawable-xxhdpi-v4/abc_list_pressed_holo_light.9.png"
+    },
+    {
+        "merged": "/Users/noracnr/AndroidStudioProjects/Fitness/app/build/intermediates/res/merged/debug/drawable_common_google_signin_btn_icon_light_normal.xml.flat",
+        "source": "/Users/noracnr/.gradle/caches/transforms-2/files-2.1/8eb866707b690ca0a19e0e3fe5cc8413/play-services-base-17.1.0/res/drawable/common_google_signin_btn_icon_light_normal.xml"
     },
     {
         "merged": "/Users/noracnr/AndroidStudioProjects/Fitness/app/build/intermediates/res/merged/debug/layout_abc_screen_simple.xml.flat",
@@ -98,10 +98,6 @@
     {
         "merged": "/Users/noracnr/AndroidStudioProjects/Fitness/app/build/intermediates/res/merged/debug/drawable-watch-v20_abc_dialog_material_background.xml.flat",
         "source": "/Users/noracnr/.gradle/caches/transforms-2/files-2.1/6baa1ce929cb6078a68a5b03b3bd41df/appcompat-1.0.2/res/drawable-watch-v20/abc_dialog_material_background.xml"
-    },
-    {
-        "merged": "/Users/noracnr/AndroidStudioProjects/Fitness/app/build/intermediates/res/merged/debug/layout_activity_email_password.xml.flat",
-        "source": "/Users/noracnr/AndroidStudioProjects/Fitness/app/src/main/res/layout/activity_email_password.xml"
     },
     {
         "merged": "/Users/noracnr/AndroidStudioProjects/Fitness/app/build/intermediates/res/merged/debug/layout-v21_notification_action_tombstone.xml.flat",
@@ -140,10 +136,6 @@
         "source": "/Users/noracnr/.gradle/caches/transforms-2/files-2.1/a30df765310c266cd6d8e7c6c14c48ac/play-services-auth-17.0.0/res/drawable-watch-v20/common_google_signin_btn_text_light_normal.xml"
     },
     {
-        "merged": "/Users/noracnr/AndroidStudioProjects/Fitness/app/build/intermediates/res/merged/debug/layout_my_likes.xml.flat",
-        "source": "/Users/noracnr/AndroidStudioProjects/Fitness/app/src/main/res/layout/my_likes.xml"
-    },
-    {
         "merged": "/Users/noracnr/AndroidStudioProjects/Fitness/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_abc_scrubber_control_to_pressed_mtrl_005.png.flat",
         "source": "/Users/noracnr/.gradle/caches/transforms-2/files-2.1/6baa1ce929cb6078a68a5b03b3bd41df/appcompat-1.0.2/res/drawable-xxhdpi-v4/abc_scrubber_control_to_pressed_mtrl_005.png"
     },
@@ -164,16 +156,16 @@
         "source": "/Users/noracnr/.gradle/caches/transforms-2/files-2.1/6baa1ce929cb6078a68a5b03b3bd41df/appcompat-1.0.2/res/drawable-xhdpi-v4/abc_btn_radio_to_on_mtrl_015.png"
     },
     {
-        "merged": "/Users/noracnr/AndroidStudioProjects/Fitness/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_abc_ic_star_black_48dp.png.flat",
-        "source": "/Users/noracnr/.gradle/caches/transforms-2/files-2.1/6baa1ce929cb6078a68a5b03b3bd41df/appcompat-1.0.2/res/drawable-xxhdpi-v4/abc_ic_star_black_48dp.png"
+        "merged": "/Users/noracnr/AndroidStudioProjects/Fitness/app/build/intermediates/res/merged/debug/layout_fragment_notifications.xml.flat",
+        "source": "/Users/noracnr/AndroidStudioProjects/Fitness/app/src/main/res/layout/fragment_notifications.xml"
     },
     {
         "merged": "/Users/noracnr/AndroidStudioProjects/Fitness/app/build/intermediates/res/merged/debug/drawable_abc_ratingbar_small_material.xml.flat",
         "source": "/Users/noracnr/.gradle/caches/transforms-2/files-2.1/6baa1ce929cb6078a68a5b03b3bd41df/appcompat-1.0.2/res/drawable/abc_ratingbar_small_material.xml"
     },
     {
-        "merged": "/Users/noracnr/AndroidStudioProjects/Fitness/app/build/intermediates/res/merged/debug/layout_fragment_notifications.xml.flat",
-        "source": "/Users/noracnr/AndroidStudioProjects/Fitness/app/src/main/res/layout/fragment_notifications.xml"
+        "merged": "/Users/noracnr/AndroidStudioProjects/Fitness/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_abc_ic_star_black_48dp.png.flat",
+        "source": "/Users/noracnr/.gradle/caches/transforms-2/files-2.1/6baa1ce929cb6078a68a5b03b3bd41df/appcompat-1.0.2/res/drawable-xxhdpi-v4/abc_ic_star_black_48dp.png"
     },
     {
         "merged": "/Users/noracnr/AndroidStudioProjects/Fitness/app/build/intermediates/res/merged/debug/font_nunito_semibold.xml.flat",
@@ -498,6 +490,10 @@
     {
         "merged": "/Users/noracnr/AndroidStudioProjects/Fitness/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_abc_scrubber_control_to_pressed_mtrl_005.png.flat",
         "source": "/Users/noracnr/.gradle/caches/transforms-2/files-2.1/6baa1ce929cb6078a68a5b03b3bd41df/appcompat-1.0.2/res/drawable-xhdpi-v4/abc_scrubber_control_to_pressed_mtrl_005.png"
+    },
+    {
+        "merged": "/Users/noracnr/AndroidStudioProjects/Fitness/app/build/intermediates/res/merged/debug/drawable_ic_search_black.xml.flat",
+        "source": "/Users/noracnr/AndroidStudioProjects/Fitness/app/src/main/res/drawable/ic_search_black.xml"
     },
     {
         "merged": "/Users/noracnr/AndroidStudioProjects/Fitness/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_notification_bg_low_pressed.9.png.flat",
@@ -1596,6 +1592,10 @@
         "source": "/Users/noracnr/.gradle/caches/transforms-2/files-2.1/a62d0da55b31cde8bcb9aae057d104ed/jetified-firebase-ui-auth-4.3.1/res/layout/fui_provider_button_anonymous.xml"
     },
     {
+        "merged": "/Users/noracnr/AndroidStudioProjects/Fitness/app/build/intermediates/res/merged/debug/drawable_white_boarder.xml.flat",
+        "source": "/Users/noracnr/AndroidStudioProjects/Fitness/app/src/main/res/drawable/white_boarder.xml"
+    },
+    {
         "merged": "/Users/noracnr/AndroidStudioProjects/Fitness/app/build/intermediates/res/merged/debug/layout_notification_media_cancel_action.xml.flat",
         "source": "/Users/noracnr/.gradle/caches/transforms-2/files-2.1/4d1cf7827ab5fc64a2e749e21bd2db69/media-1.0.0/res/layout/notification_media_cancel_action.xml"
     },
@@ -2064,6 +2064,10 @@
         "source": "/Users/noracnr/.gradle/caches/transforms-2/files-2.1/314e78ee411997f535ea385b0dca3a47/material-1.0.0/res/drawable/design_snackbar_background.xml"
     },
     {
+        "merged": "/Users/noracnr/AndroidStudioProjects/Fitness/app/build/intermediates/res/merged/debug/drawable_ic_event_image.xml.flat",
+        "source": "/Users/noracnr/AndroidStudioProjects/Fitness/app/src/main/res/drawable/ic_event_image.xml"
+    },
+    {
         "merged": "/Users/noracnr/AndroidStudioProjects/Fitness/app/build/intermediates/res/merged/debug/drawable_ic_favorite_border.xml.flat",
         "source": "/Users/noracnr/AndroidStudioProjects/Fitness/app/src/main/res/drawable/ic_favorite_border.xml"
     },
@@ -2226,6 +2230,10 @@
     {
         "merged": "/Users/noracnr/AndroidStudioProjects/Fitness/app/build/intermediates/res/merged/debug/layout-land_fui_auth_method_picker_layout.xml.flat",
         "source": "/Users/noracnr/.gradle/caches/transforms-2/files-2.1/a62d0da55b31cde8bcb9aae057d104ed/jetified-firebase-ui-auth-4.3.1/res/layout-land/fui_auth_method_picker_layout.xml"
+    },
+    {
+        "merged": "/Users/noracnr/AndroidStudioProjects/Fitness/app/build/intermediates/res/merged/debug/drawable_ic_create.png.flat",
+        "source": "/Users/noracnr/AndroidStudioProjects/Fitness/app/src/main/res/drawable/ic_create.png"
     },
     {
         "merged": "/Users/noracnr/AndroidStudioProjects/Fitness/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_abc_ic_menu_paste_mtrl_am_alpha.png.flat",
